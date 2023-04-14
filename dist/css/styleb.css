@@ -1,0 +1,1405 @@
+/* ============= remove the defualt style ============= */
+* {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	text-decoration: none;
+	list-style: none;
+	box-sizing: border-box;
+}
+
+/* ================= create css variable ========================= */
+:root {
+	--color-primary: #6c63ff;
+	--color-success: #00bf8e;
+	--color-warning: #f7c94b;
+	--color-danger: #f75842;
+	--color-danger-variant: rgba(247, 88, 66, 0.4);
+	--color-white: #fff;
+	--color-light: rgba(255, 255, 255, 0.7);
+	--color-black: #000;
+	--color-light-black: #151414;
+	--color-bg: #c8c7c7;
+	--color-bg1: #2e3267;
+	--color-btn: #2d84e7;
+	--color-topic: #1167e9f9;
+	--color-navlink: #107bd2f9;
+	--color-bg2: #424890;
+	--color-nav: #024eddf9;
+	--color-textarea: rgb(51, 49, 49);
+
+	--container-width-lm: 100%;
+	--container-width-lg: 80%;
+	--container-width-md: 90%;
+	--container-width-sm: 94%;
+	/* ===== duration and timing function ===== */
+	--transition: all 400ms ease;
+	--transition-menu: all 0.6s ease;
+}
+
+body {
+	font-family: "Kanit", sans-serif;
+	line-height: 1.7;
+	color: var(--color-topic);
+	background: var(--color-white);
+}
+
+.container {
+	width: var(--container-width-lm);
+	margin: 0 auto;
+	/* grid-template-columns: 1fr; */
+	text-align: center;
+	/* gap: 2rem; */
+}
+
+section {
+	margin: 0;
+	padding: 1rem 0;
+	width: 100%;
+}
+
+section h2 {
+	text-align: center;
+	margin-bottom: 4rem;
+}
+
+/* .fluid-container{
+  margin-left: 0 !important;
+  width: 100%;
+} */
+/* ================ a style  for all "head" elements ============ */
+h1,
+h2,
+h3,
+h4,
+h5 {
+	line-height: 1.2;
+}
+
+h1 {
+	font-size: 2.4rem;
+}
+
+h2 {
+	font-size: 2rem;
+}
+
+h3 {
+	font-size: 1.6rem;
+}
+
+h4 {
+	font-size: 1.3rem;
+}
+
+/* ======== a style for every ancor tag - links ======= */
+a {
+	color: var(--color-topic);
+}
+
+/* ============ a style for info_head and Navbar ============ */
+
+
+/* ================== end of info head here ============ */
+
+/* ======== a style for every images ======== */
+img {
+	width: 100%;
+	display: block;
+	object-fit: cover;
+}
+
+.btn {
+	padding: 5px 30px;
+	background: var(--color-white);
+	transition: var(--transition);
+	border: 0;
+	outline: none;
+	cursor: pointer;
+	font-size: 22px;
+	font-weight: 500;
+	/* width: 15%; */
+	border-radius: 30px;
+}
+/*
+.btn {
+	display: inline-block;
+  background: var(--color-white);
+  color: var(--color-topic);
+  padding: 1rem 2rem;
+  border: 1px solid transparent;
+  font-weight: 500;
+  text-align: center;
+  border-radius: 10rem;
+  height: 3rem; 
+}
+*/
+
+.btn:hover {
+	background: transparent;
+	color: var(--color-topic);
+	border-color: var(--color-white);
+}
+
+.btn-primary {
+	background: var(--color-btn);
+	color: var(--color-topic);
+
+}
+
+/* title{
+  background:#b09554d2;
+  color: #f7b202;
+} */
+/* ============== NAV ======== */
+
+nav {
+	background: transparent;
+	width: 100%;
+	height: 6rem;
+	position: absolute;
+	/* top: rem; */
+	z-index: 11;
+	padding-right: 50px;
+	margin-bottom: 100px ;
+}
+
+/* ============ to change navbar style on scroll using with 'JS'  ============ */
+.window-scroll {
+	display: none;
+	background: transparent;
+	box-shadow: 0 1re 2rem rgba(0, 0, 0, 0.2);
+}
+
+.window-scroll-d {
+	/* display: none; */
+	background-color: var(--color-btn);
+}
+
+.nav_container {
+	height: 100%;
+	display: flex;
+	top: 4rem;
+	justify-content: space-between;
+	align-items: center;
+}
+
+nav button {
+	display: none;
+}
+
+
+.nav_menu {
+	top: 3rem;
+	display: flex;
+	align-items: center;
+	gap: 2rem;
+	/* margin-right: 4rem !important; */
+}
+
+.nav_menu a {
+	margin: 1px;
+	transition: var(--transition);
+	color: var(--color-white);
+	font-size: large;
+}
+
+.nav_menu a:hover {
+	background: transparent;
+	color: var(--color-btn);
+}
+
+.eheader {
+	background: var(--color-btn);
+}
+
+/* ==================== end =============== */
+
+/* ==================== a style for Home  =============== */
+.home {
+
+	position: relative;
+	top: -1rem;
+	overflow: hidden;
+	height: 100vh;
+	/* left: 0; */
+}
+
+.home_container {
+	display: grid;
+	grid-template-columns: 1fr;
+	align-items: center;
+	/*gap: 5rem;
+   height: 100%; */
+}
+
+.homeBackground .btn {
+	top: 73vh;
+	position: absolute;
+	left: 10vw;
+	height: 2.7rem;
+	font-family: sans-serif;
+	border-bottom-style: solid var(--color-light-black);
+	box-shadow: var(--color-black);
+}
+
+.homeBackground .btn:hover {
+	color: var(--color-white);
+	border: var(--color-light-black);
+}
+
+.home_container .bgImg {
+	position: relative;
+	top: 0;
+	left: 0;
+	height: 100vh;
+	padding: 0;
+	margin: 0;
+}
+
+/* .demo1 figure=================A STYLE FOR BACKGROUND SLIDER ================== */
+.bss-slides {
+	background: #000;
+	position: relative;
+	display: block;
+}
+
+.bss-slides:focus {
+	outline: 0;
+}
+
+.bss-slides figure {
+	position: absolute;
+	top: 0;
+	width: 100%;
+}
+
+.bss-slides figure:first-child {
+	position: relative;
+}
+
+.bss-slides figure img {
+	opacity: 0;
+	-webkit-transition: opacity 1.2s;
+	transition: opacity 1.2s;
+	position: relative;
+	/*-webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  */
+}
+
+.bss-slides .bss-show {
+	z-index: 3;
+}
+
+.bss-slides .bss-show img {
+	opacity: 1;
+	/* -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;*/
+}
+
+/*Semahegn Tilahun is inviting you to a scheduled Zoom meeting.
+
+Topic: Semahegn Tilahun's Personal Meeting Room
+
+ Join Zoom Meeting
+https://us05web.zoom.us/j/4027534256?pwd=cnNOSmI3QnVVQmhwZGlEWEliSVlTQT09
+
+Meeting ID: 402 753 4256
+Passcode: 9QN0Lu */
+
+.bss-slides figcaption {
+	position: absolute;
+	font-family: sans-serif;
+	font-size: 0.8em;
+	bottom: 0.75em;
+	right: 0.35em;
+	padding: 0.25em;
+	color: #fff;
+	background: var(--color-navlink);
+	background: rgba(0, 0, 0, 0.25);
+	border-radius: 2px;
+	opacity: 0;
+	-webkit-transition: opacity 1.2s;
+	transition: opacity 1.2s;
+}
+
+.bss-slides .bss-show figcaption {
+	z-index: 2;
+	opacity: 1;
+}
+
+.bss-slides figcaption a {
+	color: #fff;
+}
+
+.bss-next,
+.bss-prev {
+	color: #fff;
+	position: absolute;
+	background: #000;
+	background: rgba(0, 0, 0, 0.6);
+	top: 50%;
+	z-index: 4;
+	font-size: 2em;
+	margin-top: -1.2em;
+	opacity: 0.5;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+.bss-next:hover,
+.bss-prev:hover {
+	cursor: pointer;
+	opacity: 1;
+}
+
+.bss-next {
+	right: 0;
+	padding: 10px 5px 15px 10px;
+	border-top-left-radius: 3px;
+	border-bottom-left-radius: 3px;
+}
+
+.bss-prev {
+	left: 0;
+	padding: 10px 10px 15px 5px;
+	border-top-right-radius: 3px;
+	border-bottom-right-radius: 3px;
+}
+
+.bss-fullscreen {
+	display: block;
+	width: 24px;
+	height: 24px;
+	background: rgba(0, 0, 0, 0.3) url(https://leemark.github.io/better-simple-slideshow/img/arrows-alt_ffffff_64.png);
+	-webkit-background-size: contain;
+	background-size: contain;
+	position: absolute;
+	top: 5px;
+	left: 5px;
+	cursor: pointer;
+	opacity: 0.3;
+}
+
+.bss-fullscreen:hover {
+	opacity: 0.8;
+}
+
+:-webkit-full-screen .bss-fullscreen {
+	background: rgba(0, 0, 0, 0.4) url(https://leemark.github.io/better-simple-slideshow/img/compress_ffffff_64.png);
+	-webkit-background-size: contain;
+	background-size: contain;
+}
+
+:-moz-full-screen .bss-fullscreen {
+	background: rgba(0, 0, 0, 0.4) url(https://leemark.github.io/better-simple-slideshow/img/compress_ffffff_64.png);
+	background-size: contain;
+}
+
+:-ms-fullscreen .bss-fullscreen {
+	background: rgba(0, 0, 0, 0.4) url(https://leemark.github.io/better-simple-slideshow/img/compress_ffffff_64.png);
+	background-size: contain;
+}
+
+:full-screen .bss-fullscreen {
+	background: rgba(0, 0, 0, 0.4) url(https://leemark.github.io/better-simple-slideshow/img/compress_ffffff_64.png);
+	-webkit-background-size: contain;
+	background-size: contain;
+}
+
+:-webkit-full-screen .bss-fullscreen {
+	background: rgba(0, 0, 0, 0.4) url(https://leemark.github.io/better-simple-slideshow/img/compress_ffffff_64.png);
+	-webkit-background-size: contain;
+	background-size: contain;
+}
+
+:-moz-full-screen .bss-fullscreen {
+	background: rgba(0, 0, 0, 0.4) url(https://leemark.github.io/better-simple-slideshow/img/compress_ffffff_64.png);
+	background-size: contain;
+}
+
+:-ms-fullscreen .bss-fullscreen {
+	background: rgba(0, 0, 0, 0.4) url(https://leemark.github.io/better-simple-slideshow/img/compress_ffffff_64.png);
+	background-size: contain;
+}
+
+:fullscreen .bss-fullscreen {
+	background: rgba(0, 0, 0, 0.4) url(https://leemark.github.io/better-simple-slideshow/img/compress_ffffff_64.png);
+	-webkit-background-size: contain;
+	background-size: contain;
+}
+
+/* =================== ENDED HERE ============================ */
+/* front ground paragrah = fgPra */
+.fgPra {
+	position: absolute;
+	top: 10rem;
+	left: 2rem;
+	right: 35%;
+	height: 35%;
+	text-align: left;
+	padding-bottom: 2rem;
+}
+
+.fgPra h1,
+p {
+	color: var(--color-white);
+}
+
+.fgPra h1 {
+	/* font-weight: bolder; */
+	font-size: 38;
+	padding-bottom: 1.5rem;
+	/* line-height: 1re; */
+}
+
+.fgPra p {
+	font-weight: lighter !important;
+	font-size: 20;
+	margin-bottom: 2rem;
+}
+
+/* ================ a style for service ================== */
+
+/* =================== a style for home ====================== */
+/* .notify {
+  position: flex;
+  top: 140rem;
+  margin-top: 100rem;
+} */
+/* ===================== end of about ===================== */
+/* ===================== a style for services ===================== */
+.services {
+	margin: 0;
+	padding-top: 25;
+}
+
+.services_container {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 2rem;
+	padding: 1rem;
+}
+
+.service {
+	/* background: var(--color-bg); */
+	text-align: center;
+	border: 1px solid transparent;
+	transition: var(--transition);
+}
+
+.services h1 {
+	text-align: center;
+	/* top: 3rem; */
+	margin-bottom: 2rem;
+}
+
+.service:hover {
+	background: transparent;
+	border-color: var(--color-btn);
+}
+
+.service_info {
+	padding: 2rem;
+}
+
+.service_info h1 {
+	text-align: left;
+	font-size: x-large;
+	font-weight: 500;
+}
+
+.service_image {
+	margin: 2rem 2rem 0 2rem;
+}
+
+.service_info p {
+	margin: 1.2rem 0 2rem;
+	font-size: 0.9rem;
+	text-align: left;
+}
+
+.service_info .btn {
+	background: var(--color-white);
+	border-radius: 1rem;
+	position: flex;
+	border: 1px solid var(--color-topic);
+}
+
+.service_info .btn:hover {
+	background: var(--color-btn);
+	color: var(--color-white);
+}
+
+/* ================ a style for testimonial ===================== */
+/* .testimonial {
+	position: relative;
+	top: 0;
+	left: 0;
+} */
+
+/* .testimonials {
+	margin-top: -3rem;
+} */
+
+.imgT {
+	position: relative;
+	top: 0;
+	left: 0;
+	/* border: 1px solid var(--color-black); */
+}
+
+/* y*/
+
+/* ================ a style for Contact Us ===================== */
+.contactus {
+	background: var(--color-white);
+	height: 80vh !important;
+	margin-bottom: 3rem;
+}
+
+.contactus_container {
+	color: var(--color-black) !important;
+	padding: 4rem;
+	display: grid;
+	grid-template-columns: 50% 50%;
+	gap: 4rem;
+	/* height: 20rem; */
+	margin: 7rem 0;
+	font-family: "Kanit", sans-serif;
+}
+.azaelPrint{
+	overflow: hidden !important;
+}
+.azaelPrint h1 {
+	text-align: left;
+	font-weight: 1rem;
+	font-family: "Kanit", sans-serif !important;
+}
+
+.azaelPrint p {
+	color: var(--color-black) !important;
+	font-size: 12;
+	text-align: left;
+}
+
+/* ===================== style for a form =========== */
+.contact_form {
+	display: flex;
+	flex-direction: column;
+	gap: 1.2rem;
+	margin-right: 7rem;
+}
+
+.contact_form input[type="text"] {
+	width: 50%;
+}
+
+.right-side {
+	margin-right: 5rem;
+}
+
+input,
+textarea {
+	margin-right: 5rem;
+	width: 100%;
+	padding: 1rem;
+	border-radius: 1rem;
+	color: var(--color-nav);
+	border: solid rgb(143, 141, 141);
+	font-family: sans-serif;
+}
+
+input:hover,
+textarea:hover {
+	box-shadow: var(--color-success);
+	border-color: var(--color-btn);
+}
+
+.inputs {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: 2rem;
+}
+
+textarea {
+	margin-top: 1.5rem;
+	resize: none;
+}
+
+.send {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: 2rem;
+	border-style: none;
+}
+
+/* ==================== POPUP THANK YOU MESSAGE STYLE==================== */
+.container-thankyou {
+	width: 100%;
+	height: 100vh;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.container-thankyou .btn {
+	padding: 10px 60px;
+	background: var(--color-bg);
+	border: 0;
+	outline: none;
+	cursor: pointer;
+	font-size: 22px;
+	font-weight: 500;
+	border-radius: 30px;
+}
+
+/* /* ========================================================== */
+.popup {
+	width: 400px;
+	background: var(--color-nav);
+	border-radius: 6px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%) scale(0.1);
+	text-align: center;
+	padding: 0 30px 30px;
+	color: var(--color-textarea);
+	visibility: hidden;
+	transition: transform 0.4s, top 0.4s;
+}
+
+.open-popup {
+	visibility: visible;
+	top: 50%;
+	transform: translate(-50%, -50%) scale(1);
+}
+
+.popup image {
+	width: 100px;
+	margin-top: -50px;
+	border-radius: 50%;
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.popup h2 {
+	font-size: 30px;
+	font-weight: 500;
+	margin: 30px 0 10px;
+}
+
+.popup button {
+	width: 100%;
+	margin-top: 50px;
+	padding: 10px 0;
+	background: #6fd649;
+	color: var(--color-white);
+	border: 0;
+	outline: none;
+	font-size: 18px;
+	border-radius: 4px;
+	cursor: pointer;
+	box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+
+}
+
+/* ==================================== ENDED POPUP MESSAGE STYLE ============= */
+
+.alert-success {
+	z-index: 1;
+	background: #D4edda;
+	font-size: 14px;
+	font-weight: 700;
+	padding: 20p 40px;
+	width: 100%;
+	color: green;
+	border-left: 8px solid var(--color-topic);
+	border-radius: 4px;
+}
+
+.alert-error {
+	z-index: 1;
+	background: #fff3cd;
+	font-size: 14px;
+	font-weight: 700;
+	padding: 20p 40px;
+	width: 100%;
+	color: red;
+	border-left: 8px solid var(--color-danger);
+	border-radius: 4px;
+}
+
+#btn {
+	display: table-footer-group;
+	float: right;
+	margin: 0.5rem 1rem;
+	color: var(--color-white);
+	background: var(--color-btn);
+	border-radius: 0.5rem;
+	/* border-style: ridge var(--color-light-black); */
+}
+
+/* .contact_form .send{
+    margin-right: 0;
+    float: right !important;
+} */
+/* ================ a style for about us ===================== */
+.aboutus {
+	position: relative;
+	top: 0;
+	margin-top: 2rem;
+	left: 0;
+}
+
+.abtImg {
+	position: relative;
+	top: 0;
+	left: 0;
+	/* border: 1px solid var(--color-black); */
+}
+
+.aboutus_htry {
+	position: absolute;
+	top: 15%;
+	left: 5%;
+	right: 5%;
+}
+
+.aboutus_htry h1 {
+	/* position: absolute; */
+	/* top: -6rem; */
+	margin-bottom: 0;
+	padding-bottom: 0;
+	/* left: 40%; */
+	font-weight: bold;
+	font-size: 45;
+	color: var(--color-white);
+	/* font-weight: bolder; */
+	text-align: center;
+	font-family: sans-serif;
+}
+
+.aboutus_htry p {
+	/* top: -2rem; */
+	padding: 3% 2rem 3rem;
+	padding-right: 3rem;
+
+	font-size: 20;
+	font-weight: lighter;
+	text-align: center;
+	font-family: "Kanit", sans-serif;
+}
+
+
+/* ================ end a style for about ===================== */
+
+/*  ============ a style for footer ============ */
+footer {
+	background: var(--color-light-black);
+	padding-top: 2rem;
+	font-size: 0.9rem;
+}
+
+.footer_container {
+	display: grid;
+	grid-template-columns: 40% 25% 5% 30%;
+	column-gap: 1rem;
+	/* padding-right: 5rem; */
+}
+
+.footer_1 {
+	margin-left: 0;
+	/* border-inline: solid; */
+	align-items: justify;
+	/* align-items: flex-start; */
+}
+
+.footer_2 {
+	margin-right: 1rem;
+	left: 3.5rem;
+	color: var(--color-white);
+}
+
+.address p,
+.footer_1 p {
+	color: var(--color-white) !important;
+}
+
+.footer_2 h4,
+.footer_2 h2,
+.address p {
+	text-align: justify;
+}
+
+.footer_2 h2 {
+	font-weight: lighter;
+	font-size: x-large;
+}
+
+.footer_2 h4 {
+	font-size: xx-large;
+}
+
+.footer_socialmds li {
+	display: inline;
+	gap: 1rem;
+	width: 50px;
+	/* max-width: 2rem;
+	max-height: 1rem; */
+}
+
+.footer_socialmds li img {
+	border-radius: 50%;
+	width: 50px;
+	/* width: 10px; */
+}
+
+.footer_socialmds li p a {
+	width: 50px;
+	padding: 150px;
+	font-size: large;
+	color: var(--color-white);
+}
+
+
+/* ============================================== */
+/*Floating Back-To-Top Button*/
+.footer #myBtn {
+	position: fixed;
+	bottom: 2rem;
+	left: 90%;
+	max-width: 2.5rem;
+	font-size: 12px;
+	border-color: rgba(225, 219, 219, 0.2);
+	background-color: var(--color-btn);
+	opacity: 0.3;
+	border-radius: 4px;
+}
+
+/*On Hover Color Change*/
+.footer #myBtn:hover {
+	background-color: var(--color-btn);
+	color: var(--color-black);
+	opacity: 1;
+}
+
+/*  ====================== a style for copy right ================== */
+
+.footer_copyright {
+	text-align: center;
+	margin-top: 4rem;
+	padding: 1.2rem 0;
+	color: var(--color-white);
+	border-top: 1px solid var(--color-bg2);
+}
+
+
+/* .footer_copyright small a {
+  position: f;
+  margin-left: 0;
+  margin-bottom: -5rem;
+} */
+/* ============ media queris (Tablet) ============ */
+
+@media screen and (max-width: 1024px) {
+	/* .container {
+		width: var(--container-width-md);
+	} */
+
+	h1 {
+		font-size: 2.2rem;
+	}
+
+	h2 {
+		font-size: 1.7rem;
+	}
+
+	h3 {
+		font-size: 1.4rem;
+	}
+
+	h4 {
+		font-size: 1.2rem;
+	}
+
+	/* ====================== query for NAVBAR ====================== */
+	nav button {
+		display: inline-block;
+		background: transparent;
+		font-size: 1.8rem;
+		color: var(--color-white);
+		cursor: pointer;
+	}
+
+	nav button#close-menu-btn {
+		display: none;
+	}
+
+	.nav_menu {
+		position: fixed;
+		top: 2rem;
+		right: 5%;
+		height: fit-content;
+		width: 18rem;
+		flex-direction: column;
+		gap: 0;
+		display: none;
+	}
+
+	.nav_menu li {
+		width: 100%;
+		height: 5.8rem;
+	}
+
+	.nav_menu li a {
+		background: var(--color-topic);
+		box-shadow: -4rem 6rem 10rem rgba(0, 0, 0, 0.6);
+		width: 100%;
+		height: 100%;
+		display: grid;
+		place-items: center;
+	}
+
+	.nav_menu li a:hover {
+		background: var(--color-btn);
+		color: var(--color-white);
+	}
+
+	/* =========================== query for first section HOME fgra======================== */
+	.fgPra {
+		position: absolute;
+		top: 12rem;
+		left: 8rem;
+		right: 35%;
+		height: 35%;
+		text-align: left;
+		padding-bottom: 2rem;
+	}
+
+	.fgPra h1 {
+
+		font-size: 3.5rem;
+		padding-bottom: 1.5rem;
+	}
+
+	.fgPra p {
+		font-weight: lighter;
+		font-size: 1.7rem;
+		margin-bottom: 2rem;
+	}
+
+	.homeBackground .btn {
+		left: 13vw;
+	}
+
+	/* =========================== query for secont section SERVICES ======================== */
+	.services {
+		height: auto;
+		margin-top: 0;
+	}
+
+	.services_container {
+		grid-template-columns: 1fr 1fr;
+		gap: 1rem;
+	}
+
+	/* =========================== query for secont section SERVICES ======================== */
+	.testimonial_speach {
+		top: 3.5rem;
+		left: 21rem;
+		right: 1rem;
+		height: 35%;
+		margin-right: 2rem;
+		text-align: left;
+	}
+
+	.testimonial_speach p {
+		font-size: 1.3rem;
+		font-weight: medium;
+		font-family: "Kanit", sans-serif;
+	}
+
+	/* =========================== query for third section CONTACT US ======================== */
+	.contactus {
+		height: 70vh;
+	}
+
+	.azaelPrint .contact_left {
+		width: 100vw;
+	}
+
+	.right-side .contact_right {
+		width: 100vw;
+	}
+
+	.azaelPrint h1 {
+		text-align: left;
+		font-weight: 1rem;
+		font-family: "Kanit", sans-serif !important;
+	}
+
+	.azaelPrint p {
+		color: var(--color-black) !important;
+		font-size: 1.2rem;
+	}
+
+	/* ================= query contact form ====================== */
+	.contact_form {
+		display: flex;
+		flex-direction: column;
+		gap: 1.2rem;
+		margin-right: 7rem;
+	}
+
+	.contact_form input[type="text"] {
+		width: 100%;
+	}
+
+	.right-side {
+		margin-right: 0.5rem;
+	}
+
+	input,
+	textarea {
+		margin-right: 1rem;
+		width: 100%;
+		padding: 1rem;
+		border-radius: 1rem;
+		color: var(--color-nav);
+		border: solid rgb(143, 141, 141);
+		font-family: sans-serif;
+	}
+
+	input:hover,
+	textarea:hover {
+		box-shadow: var(--color-success);
+		border-color: var(--color-btn);
+	}
+
+	.inputs {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		gap: 1rem;
+	}
+
+	textarea {
+		margin-top: 1rem;
+		resize: none;
+	}
+
+	.send {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		gap: 1rem;
+		border-style: none;
+	}
+
+	/* ================= query for success and error display  ====================== */
+
+
+	/* ================= query about us ====================== */
+	.aboutus {
+		position: relative;
+		top: 0;
+		margin-top: 2rem;
+		left: 0;
+	}
+
+	.abtImg {
+		position: relative;
+		top: 0;
+		left: 0;
+		height: 60vh;
+		/* border: 1px solid var(--color-black); */
+	}
+
+	.aboutus_htry {
+		position: absolute;
+		top: 10rem;
+		left: 7rem;
+		right: 3rem;
+		/* height: 35%;
+    margin-right: 3rem; */
+	}
+
+	.aboutus_htry h1 {
+		top: -8rem;
+		left: 40%;
+		font-size: 2.3rem;
+	}
+
+	.aboutus_htry p {
+		margin-top: -4rem;
+		font-size: 1.5rem;
+		padding-bottom: 1.5rem;
+	}
+
+	/* ================ query for footer ===================== */
+	/* .footer_container{
+     grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin: 1rem ; 
+  .footer_2 {
+    margin-right: 0;
+    left: 0;
+    top: -1rem;
+  }*/
+
+	/* ***************************************************************** */
+	/* =============================SECOND QUERY FOR MOBILE VIEW ============================== */
+	/* ============ media queris (Tablet) ============ */
+
+	@media screen and (max-width: 600px) {
+		/* .container {
+			width: var(--container-width-sm);
+		} */
+
+		/* h1{
+      font-size: 2.2rem;
+    }
+    h2{
+      font-size: 1.7rem;
+    }
+    h3{
+      font-size: 1.4rem;
+    }
+    
+    h4{
+      font-size: 1.2rem;
+    } */
+		/* ====================== query for NAVBAR ====================== */
+		/* nav button{
+      display: inline-block;
+      background: transparent;
+      font-size: 1.8rem;
+      color: var(--color-white);
+      cursor: pointer;
+    }
+    nav button#close-menu-btn{
+      display: none;
+    } */
+
+		.nav_menu {
+			/* position: fixed;
+      top: 2rem; */
+			right: 3%;
+			/* height: fit-content;
+      width: 18rem;
+      flex-direction: column;
+      gap: 0;
+      display: none; */
+		}
+
+		/* .nav_menu li{
+      width: 100%;
+      height: 5.8rem;
+    }
+    .nav_menu li a{
+      background: var(--color-topic);
+      box-shadow: -4rem 6rem 10rem rgba(0, 0, 0, 0.6);
+      width: 100%;
+      height: 100%;
+      display: grid;
+      place-items: center;
+    }
+    .nav_menu li a:hover{
+      background: var(--color-btn);
+      color: var(--color-white);
+    } */
+		/* =========================== query for first section HOME fgra======================== */
+		/* */
+		.fgPra {
+			/* position: absolute; */
+			top: 10rem;
+			left: 4rem;
+			padding-right: 5%;
+			height: 25vh;
+			width: 80vw;
+			/* text-align: left;
+      padding-bottom: 2rem; */
+		}
+
+		.fgPra h1 {
+			font-size: 3rem;
+			padding-bottom: 1.5rem;
+		}
+
+		.fgPra p {
+			font-weight: lighter;
+			font-size: 1.7rem;
+			margin-bottom: 2rem;
+		}
+
+		.home {
+			height: 85vh;
+		}
+
+		.homeBackground .btn {
+			left: 13vw;
+		}
+
+		.home_container .bgImg {
+			position: relative;
+			top: 0;
+			left: 0;
+			height: 90vh;
+		}
+
+		/* =========================== query for secont section SERVICES ======================== */
+		.services {
+			height: auto;
+			margin-top: -2rem;
+		}
+
+		.services_container {
+			grid-template-columns: 1fr;
+			gap: 1rem;
+		}
+
+		/* =========================== query for secont section SERVICES ======================== */
+		/* .testimonial {
+			height: 25vh;
+		} */
+
+		/* .imgT {
+			width: 65vh;
+		} */
+
+		/* .testimonial_speach {
+			top: 1rem;
+			left: 13rem;
+			padding-right: 0.5rem;
+			width: 35vh;
+			 margin-right: 2rem;
+			text-align: left;
+		} */
+
+		/* .testimonial_speach p {
+			font-size: 1.3rem;
+			font-weight: medium;
+			font-family: "Kanit", sans-serif;
+		} */
+
+		/**/
+		/* =========================== query for third section CONTACT US ======================== */
+		/* .contactus{
+      height: 70vh;
+    }
+    .azaelPrint .contact_left{
+      width: 100vw;
+    }
+    .right-side .contact_right{
+      width: 100vw;
+    }
+    
+    .azaelPrint h1 {
+      text-align: left;
+      font-weight: 1rem;
+      font-family: "Kanit", sans-serif !important;
+    }
+    .azaelPrint p {
+      color: var(--color-black) !important;
+      font-size: 1.2rem;
+    } */
+
+		/* ================= query contact form ====================== */
+		/* .contact_form {
+        display: flex;
+        flex-direction: column;
+        gap: 1.2rem;
+        margin-right: 7rem;
+    }
+
+    .contact_form input[type="text"] {
+      width: 100%;
+    }
+    .right-side {
+      margin-right: 0.5rem;
+    }
+
+    input,
+    textarea {
+      margin-right:1rem ;
+      width: 100%;
+      padding: 1rem;
+      border-radius: 1rem;
+      color: var(--color-nav);
+      border: solid rgb(143, 141, 141);
+      font-family: sans-serif ;
+    }
+
+    input:hover,
+    textarea:hover {
+      box-shadow: var(--color-success);
+      border-color: var(--color-btn);
+    }
+    .inputs {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1rem;
+    }
+    textarea {
+      margin-top: 1rem;
+      resize: none;
+    }
+    .send {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1rem;
+      border-style: none;
+    } */
+		/* ================= query for success and error display  ====================== */
+
+
+		/* ================= query about us ====================== */
+		/* .aboutus {
+      position: relative;
+      top: 0;
+      margin-top: 2rem;
+      left: 0;
+    }
+
+    .abtImg {
+      position: relative;
+      top: 0;
+      left: 0;
+      height: 60vh;  */
+		/* border: 1px solid var(--color-black); */
+		/* }
+    .aboutus_htry {
+      position: absolute;
+      top: 10rem;
+      left: 7rem;
+      right: 3rem; */
+		/* height: 35%;
+      margin-right: 3rem; */
+		/* }
+    .aboutus_htry h1 {
+      top: -8rem;
+      left: 40%;
+      font-size: 2.3rem;
+    }
+    .aboutus_htry p {
+      margin-top: -4rem;
+      font-size: 1.5rem;
+      padding-bottom: 1.5rem;
+    } */
+		/* =====K=========== query for footer ===================== */
+		/* .footer_container{
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+        margin: 1rem ; 
+      .footer_2 {
+        margin-right: 0;
+        left: 0;
+        top: -1rem;
+      }*/
+	}
+
+}
